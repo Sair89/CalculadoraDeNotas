@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Calculadora de Notas</string>
+    <string name = "score1" >Nota 1</string>
+    <string name = "score2" >Nota 2</string>
+    <string name = "absence" >Faltas</string>
+    <string name = "calculate" >Calcular</string>
 </resources>
