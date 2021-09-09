@@ -1,5 +1,6 @@
 package com.example.calculadoradenotas
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val bt_Calcular : Button = bt_calcular
-        val resultado : TextView = resultado
 
-        bt_calcular.setOnClickListener {
+
+        bt_Calcular.setOnClickListener {
 
             val nota1 : Int = Integer.parseInt(nota1.text.toString())
             val nota2 : Int = Integer.parseInt(nota2.text.toString())
@@ -31,11 +32,15 @@ class MainActivity : AppCompatActivity() {
 
     fun resultadoAluno (media : Int, faltas : Int) {
 
+        val result : TextView = resultado
+
         if (media >= 6 && faltas <= 10){
-            resultado.setText("Aluno foi aprovado com nota " + media + " e faltas " + faltas)
+            result.setText("Aluno foi aprovado!" +"\n" + "Nota: " + media + "\n" + "Faltas: " + faltas + "\n")
+            result.setTextColor(Color.GREEN)
         }
         else{
-            resultado.setText("Aluno foi reprovado com nota " + media + " e faltas " + faltas)
+            result.setText("Aluno foi reprovado!" +"\n" + "Nota: " + media + "\n" + "Faltas: " + faltas + "\n")
+            result.setTextColor(Color.RED)
         }
     }
 
